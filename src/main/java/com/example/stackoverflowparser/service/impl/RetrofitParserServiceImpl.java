@@ -23,7 +23,7 @@ public class RetrofitParserServiceImpl implements ParserService {
         List<ItemDto> itemDtos = new ArrayList<>();
         for (int i = 1; i <= 25; i++) {
             try {
-                Thread.sleep(150);
+                Thread.sleep(100);
             } catch (InterruptedException e) {
                 throw new RuntimeException("Couldn't get items. " + e);
             }
@@ -31,6 +31,7 @@ public class RetrofitParserServiceImpl implements ParserService {
                     .getItems()
                     .stream()
                     .filter(FilterPredicateUtil.itemFilter)
+                    .peek(System.out::println)
                     .map(mapper::toDto)
                     .filter(itemDto -> itemDto.getTotalAnswers() > 1)
                     .collect(Collectors.toList()));

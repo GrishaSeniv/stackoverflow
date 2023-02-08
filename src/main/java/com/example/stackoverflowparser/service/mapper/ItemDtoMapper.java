@@ -40,7 +40,7 @@ public class ItemDtoMapper {
         List<Tag> tags = new ArrayList<>();
         for (int i = 1; i <= 25; i++) {
             try {
-                Thread.sleep(150);
+                Thread.sleep(10);
             } catch (InterruptedException e) {
                 throw new RuntimeException("Couldn't get tags. " + e);
             }
