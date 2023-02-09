@@ -29,7 +29,7 @@ Project structure:
 
 - Clone this project from GitHub;
 - mvn clean package - execute command in the project root folder
-- target/stackoverflow-retrofit-parser-1.0-SNAPSHOT-jar-with-dependencies.jar - then execute this command to execute jar-file
+- java -jar target/stackoverflow-retrofit-parser-1.0-SNAPSHOT-jar-with-dependencies.jar - then execute this command to execute jar-file
 
 ## Execution result
 ![alt text](img/result.JPG)
